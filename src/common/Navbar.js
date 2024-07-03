@@ -2,6 +2,7 @@ import * as React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
+import { AppBar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -50,26 +51,29 @@ function Navbar() {
     };
 
     return (
+        // in toolbar  style={{ position: 'fixed' }}
 
         <Container>
-            <Toolbar disableGutters>
-                <Typography
-                    variant="h6"
-                    noWrap
-                    component="a"
-                    href="#"
-                    sx={{
-                        mr: 2,
-                        display: { xs: 'none', md: 'flex' },
-                        fontFamily: 'monospace',
-                        fontWeight: 700,
-                        letterSpacing: '.3rem',
-                        color: 'inherit',
-                        textDecoration: 'none',
-                    }}
-                >
-                    <strong>SHOP</strong> LITE
-                </Typography>
+            <Toolbar>
+                <Link to='/' style={{ textDecoration: 'none' }}>
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="a"
+                        href="#"
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'none', md: 'flex' },
+                            fontFamily: 'monospace',
+                            fontWeight: 700,
+                            letterSpacing: '.3rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        SHOP LITE
+                    </Typography>
+                </Link>
 
                 <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                     <IconButton
@@ -181,18 +185,6 @@ function Navbar() {
                 </Box>
             </Toolbar>
 
-            {/* Define routes here
-            <Routes>
-                <Route exact path="/" element={<div>Home Page</div>} />
-                <Route path="/about" element={<div>About Page</div>} />
-                <Route path="/shop" element={<div>Shop Page</div>} />
-                <Route path="/product-page" element={<div>Product Page</div>} />
-                <Route path="/cart" element={<div>Cart Page</div>} />
-                <Route path="/checkout" element={<div>Checkout Page</div>} />
-                <Route path="/blog" element={<div>Blog Page</div>} />
-                <Route path="/blog-post" element={<div>Blog Post Page</div>} />
-                <Route path="/contact" element={<div>Contact Page</div>} />
-            </Routes> */}
         </Container>
 
     );

@@ -9,7 +9,7 @@ const Header = () => {
 
                 <Typography>Need help? Call us 112233344455</Typography>
 
-                <Typography>Summer sale discount off 60% off! <Link>Shop Now </Link></Typography>
+                <Typography>Summer sale discount off 60% off! <Link to='/shop'>Shop Now </Link></Typography>
 
                 <Typography>2-3 business days delivery & free returns</Typography>
             </Grid >
