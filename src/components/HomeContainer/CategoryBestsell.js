@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Card, CardContent, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Container, Typography, Card, CardContent, useMediaQuery, useTheme } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import phon from '../../assets/phon.png';
@@ -24,7 +24,9 @@ const CategoryBestsell = () => {
         { img: joy, title: 'Digital Watches' },
         { img: clock, title: 'Joysticks' },
         { img: ear, title: 'EarPods' },
-        { img: laptop, title: 'Laptops' }
+        { img: laptop, title: 'Laptops' },
+        // { img: laptop, title: 'Laptops' },
+        // { img: laptop, title: 'Laptops' }
     ];
 
     const imgdata2 = [
@@ -69,7 +71,7 @@ const CategoryBestsell = () => {
                             <CardContent>
                                 <img src={item.img} alt={item.title} style={{ width: '100px', height: '100px', marginBottom: '8px', alignContent: 'center' }} />
                                 <Typography>{item.title}</Typography>
-                                {item.price && <Typography sx={{ color: 'orange' }}>{item.price}</Typography>}
+                                {item.price && <Typography sx={{ color: 'orange', textAlign: 'center', mt: 2 }}>{item.price}</Typography>}
                             </CardContent>
                         </Card>
                     </SwiperSlide>

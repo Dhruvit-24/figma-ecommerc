@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+// import { AppBar } from '@mui/material';
+import { Link } from 'react-router-dom';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import { AppBar } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
@@ -54,7 +55,8 @@ function Navbar() {
         // in toolbar  style={{ position: 'fixed' }}
 
         <Container>
-            <Toolbar>
+
+            <Toolbar style={{ position: 'sticky' }}>
                 <Link to='/' style={{ textDecoration: 'none' }}>
                     <Typography
                         variant="h6"
@@ -121,7 +123,7 @@ function Navbar() {
                         textDecoration: 'none',
                     }}
                 >
-                    <strong>SHOP</strong> LITE
+                    <Link to='/' style={{ textDecoration: 'none' }}><strong>SHOP</strong> LITE</Link>
                 </Typography>
                 <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
                     {pages.map((page) => (

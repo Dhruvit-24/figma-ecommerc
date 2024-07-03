@@ -1,18 +1,37 @@
-import { Outlet } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import Header from './common/Header';
 import Navbar from './common/Navbar';
-import Footer from './common/Footer'
-
+import Footer from './common/Footer';
+import Loder from './common/Loder';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const location = useLocation();
+
+  useEffect(() => {
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [location]);
+
   return (
     <>
-      <Header />
-      <Navbar />
-      <main>
-        <Outlet />
-      </main>
-      <Footer />
+      {loading ? (
+        <Loder />
+      ) : (
+        <>
+          <Header />
+          <Navbar />
+          <main>
+            <Outlet />
+          </main>
+          <Footer />
+        </>
+      )}
     </>
   );
 }
