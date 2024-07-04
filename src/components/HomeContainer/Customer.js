@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
-import { Container, Grid, Typography, Card, CardContent, Box, IconButton } from '@mui/material';
+import { Container, Grid, Typography, Card, CardContent, Box } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import SwipeableViews from 'react-swipeable-views';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 
 const Customer = () => {
     const data = [
@@ -48,13 +47,6 @@ const Customer = () => {
     const maxCardsPerSwipe = 3;
     const numSwipeViews = Math.ceil(data.length / maxCardsPerSwipe);
 
-    const buttonStyles = {
-        position: 'absolute',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        backgroundColor: 'rgba(255, 255, 255, 0.7)'
-    };
-
     return (
         <Container sx={{ mt: 5 }}>
             <Typography variant='h5' color='gray'>Customers Reviews</Typography>
@@ -77,23 +69,6 @@ const Customer = () => {
                     </Grid>
                 ))}
             </SwipeableViews>
-            {/* Navigation arrows */}
-            <IconButton
-                aria-label="Previous"
-                onClick={() => handleStepChange(activeStep - 1)}
-                disabled={activeStep === 0}
-                sx={{ ...buttonStyles, left: '10px' }}
-            >
-                <ArrowBackIcon />
-            </IconButton>
-            <IconButton
-                aria-label="Next"
-                onClick={() => handleStepChange(activeStep + 1)}
-                disabled={activeStep === numSwipeViews - 1}
-                sx={{ ...buttonStyles, right: '10px' }}
-            >
-                <ArrowForwardIcon />
-            </IconButton>
         </Container>
     );
 };

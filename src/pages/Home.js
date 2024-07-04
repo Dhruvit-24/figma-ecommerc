@@ -7,6 +7,7 @@ import Customer from '../components/HomeContainer/Customer'
 import LatestPost from '../components/HomeContainer/LatestPost'
 import Logo from '../components/HomeContainer/Logo'
 import Instagram from '../components/HomeContainer/Instagram'
+import Freedelivery from '../components/HomeContainer/Freedelivery'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
         <>
             {/* section */}
             <GoproHero />
+            <Freedelivery />
             <CategoryBestsell />
             <Discount />
             <FeaturedLatest />

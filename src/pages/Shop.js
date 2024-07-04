@@ -1,8 +1,14 @@
 import React from 'react'
+import ShopMain from '../components/ShopContainer/ShopMain'
+import ShopHero from '../components/ShopContainer/ShopHero'
 
 const Shop = () => {
     return (
-        <div>Shop</div>
+        <>
+            {/* Shop Section */}
+            <ShopMain />
+            <ShopHero />
+        </>
     )
 }
 

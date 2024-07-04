@@ -4,6 +4,7 @@ import Header from './common/Header';
 import Navbar from './common/Navbar';
 import Footer from './common/Footer';
 import Loder from './common/Loder';
+import LastFooter from './common/LastFooter';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -30,6 +31,7 @@ function App() {
             <Outlet />
           </main>
           <Footer />
+          <LastFooter />
         </>
       )}
     </>
