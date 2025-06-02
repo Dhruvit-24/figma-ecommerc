@@ -8,7 +8,7 @@ const Header = () => {
             <Container>
                 <Grid container display='flex' justifyContent='space-evenly' mt={2}>
 
-                    <Typography>Need help? Call us 112233344455</Typography>
+                    <Typography >Need help? Call us <span style={{ color: '#00a2ff' }}> 112233344455 </span></Typography>
 
                     <Typography>Summer sale discount off 60% off! <Link to='/shop'>Shop Now </Link></Typography>
 

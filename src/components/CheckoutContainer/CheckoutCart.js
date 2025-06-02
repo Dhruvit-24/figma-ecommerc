@@ -1,4 +1,4 @@
-import { Box, Container, Divider, FormControl, FormControlLabel, FormLabel, Grid, Radio, RadioGroup, Typography } from '@mui/material'
+import { Box, Button, Container, Divider, FormControl, FormControlLabel, Grid, Radio, RadioGroup, Typography } from '@mui/material'
 import React, { useState } from 'react'
 
 const CheckoutCart = () => {
@@ -59,6 +59,7 @@ const CheckoutCart = () => {
                                 label="PayPal"
                             />
                         </RadioGroup>
+                        <Button sx={{ backgroundColor: '#FF6543', borderRadius: '100px', color: 'white' }}>Place An Order</Button>
                     </FormControl>
                 </Grid>
             </Container>

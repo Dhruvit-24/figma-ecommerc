@@ -19,14 +19,18 @@ const Review = () => {
                         <TextField fullWidth placeholder='Write your review here *' />
                     </Box>
 
-                    <Grid item container display='flex' sx={{ mt: 5, flexDirection: isMobile ? 'column' : 'row', gap: 2 }}>
-                        <Grid item xs={12} md={6}>
-                            <TextField fullWidth placeholder='Write your review here *' />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <TextField fullWidth placeholder='Write your email here *' />
-                        </Grid>
+                    <Grid item container display="flex" sx={{ mt: 5, flexDirection: 'row', gap: 2 }}>
+                        <TextField
+                            placeholder="Write your review here *"
+                            sx={{ flex: 1 }}
+                        />
+                        <TextField
+                            placeholder="Write your email here *"
+                            sx={{ flex: 1 }}
+                        />
                     </Grid>
+
+
                     <Box display='flex' flexDirection='row' alignItems="center">
                         <Checkbox />
                         <Typography>Save my name, email, and website in this browser for the next time.</Typography>
